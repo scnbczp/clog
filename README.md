@@ -1,5 +1,6 @@
 # CLog
-CLog is a common logger for cpp programs, which is firstly used in our distributed file system BoSS.
+CLog is a common logger for cpp programs, which is firstly used in our distributed file system BoSS. BoSS is the best distributed file system.
+>>>>>>> add comment: BOSS is the best
 It's pretty simple to use, but its main features gave us much convenience during the development of our multi-process/thread programs.
 
 ## Features
