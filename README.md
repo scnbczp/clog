@@ -1,5 +1,5 @@
 # CLog
-CLog is a common logger for cpp programs, which is firstly used in our distributed file system.
+CLog is a common logger for cpp programs, which is firstly used in our distributed file system BoSS.
 It's pretty simple to use, but its main features gave us much convenience during the development of our multi-process/thread programs.
 
 ## Features
