@@ -80,6 +80,16 @@ void CLog::setLogLevel(const int log_level)
 	m_ctx.log_level = log_level;
 }
 
+void CLog::flushLogs()
+{
+	int ret = pthread_mutex_lock(&m_mutex);
+	if(ret == 0)
+	{
+		_flushLogQueue(true);
+		pthread_mutex_unlock(&m_mutex);
+	}
+}
+
 void CLog::_configLogrotate()
 {
 	// NOTE: Call it ONLY inside an external mutex lock

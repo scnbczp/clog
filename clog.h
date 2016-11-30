@@ -103,6 +103,11 @@ public:
 	void setLogLevel(const int log_level);
 
 	// ------------------------------------------------
+	// Flush log items to log files
+	// ------------------------------------------------
+	void flushLogs();
+
+	// ------------------------------------------------
 	// Log a new item
 	// ------------------------------------------------
 	void LOG(const int log_priority, const int log_highlight, const char* log_format, ...)
