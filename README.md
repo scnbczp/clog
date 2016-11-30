@@ -30,3 +30,6 @@ CLog is a common logger for cpp programs, which is firstly used in our distribut
     ctx.b_log_screen = false;
     ctx.b_log_rotate = true;
     strcpy(ctx.log_file_name, "/tmp/foobar.log");
+
+## Attention
+CLog supports multi-process programs. However, you may need to firstly call CLog::flushLogs() explicitly to flush log items in memory back to the log file before fork().
