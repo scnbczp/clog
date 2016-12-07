@@ -109,8 +109,10 @@ public:
 
 	// ------------------------------------------------
 	// Log a new item
+	// NOTE: In __attribute__ format check, "this" is parameter #1
 	// ------------------------------------------------
 	void LOG(const int log_priority, const int log_highlight, const char* log_format, ...)
+		__attribute__((format(printf, 4, 5)))
 	{
 		va_list vargs;
 		va_start(vargs, log_format);
@@ -122,6 +124,7 @@ public:
 	// Log a new CRITICAL item
 	// ------------------------------------------------
 	void CRITICAL(const char* log_format, ...)
+		__attribute__((format(printf, 2, 3)))
 	{
 		va_list vargs;
 		va_start(vargs, log_format);
@@ -133,6 +136,7 @@ public:
 	// Log a new WARN item
 	// ------------------------------------------------
 	void WARN(const char* log_format, ...)
+		__attribute__((format(printf, 2, 3)))
 	{
 		va_list vargs;
 		va_start(vargs, log_format);
@@ -144,6 +148,7 @@ public:
 	// Log a new INFO item
 	// ------------------------------------------------
 	void INFO(const char* log_format, ...)
+		__attribute__((format(printf, 2, 3)))
 	{
 		va_list vargs;
 		va_start(vargs, log_format);
@@ -155,6 +160,7 @@ public:
 	// Log a new DEBUG item
 	// ------------------------------------------------
 	void DEBUG(const char* log_format, ...)
+		__attribute__((format(printf, 2, 3)))
 	{
 		va_list vargs;
 		va_start(vargs, log_format);
