@@ -31,6 +31,7 @@ CLog::CLog()
 	ctx_default.b_log_screen = true;
 	ctx_default.b_log_rotate = false;
 	strcpy(ctx_default.log_file_name, "");
+	setContext(&ctx_default);
 }
 
 CLog::~CLog()
