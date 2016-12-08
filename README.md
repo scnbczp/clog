@@ -14,7 +14,7 @@ CLog is a common logger for cpp programs, which is firstly used in our distribut
     
     // Config process related log context
     CLog::SLogContext ctx;
-    ctx.log_level = LOG_PRI_DEBUG;
+    ctx.log_level = LOG_PRI_WARN;
     ctx.log_color = LOG_CLR_PID;
     ctx.b_log_screen = true;
     ctx.b_log_rotate = false;
@@ -22,11 +22,12 @@ CLog is a common logger for cpp programs, which is firstly used in our distribut
     
     // Get instance and output log lines
     CLog::getInstance().setContext(&ctx);
-    CLog::getInstance().DEBUG("Some debug information here.");
-    CLog::getInstance().LOG(LOG_PRI_DEBUG, LOG_HL_MARK, "Highlight information here!");
+    CLog::getInstance().WARN("Some debug information here.");
+    CLog::getInstance().LOG(LOG_PRI_WARN, LOG_HL_MARK, "Highlight information here!");
 ### For log file output
     // Just config log context like this
     CLog::SLogContext ctx;
+    ctx.log_level = LOG_PRI_WARN;
     ctx.b_log_screen = false;
     ctx.b_log_rotate = true;
     strcpy(ctx.log_file_name, "/tmp/foobar.log");
