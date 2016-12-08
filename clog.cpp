@@ -63,6 +63,9 @@ void CLog::setContext(const SLogContext* ctx)
 				close(m_log_queue.log_fd);
 				m_log_queue.log_fd = -1;
 			}
+
+			m_ctx.b_log_rotate = false;
+			_configLogrotate();
 			pthread_mutex_unlock(&m_mutex);
 		}
 	}
