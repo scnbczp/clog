@@ -22,7 +22,7 @@ CLog is a common logger for cpp programs, which is firstly used in our distribut
     
     // Get instance and output log lines
     CLog::getInstance().setContext(&ctx);
-    CLog::getInstance().WARN("Some debug information here.");
+    CLog::getInstance().WARN("Some warning information here.");
     CLog::getInstance().LOG(LOG_PRI_WARN, LOG_HL_MARK, "Highlight information here!");
 ### For log file output
     // Just config log context like this
